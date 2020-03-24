@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="classes">
+   
+    <!-- DOING PARALLEL TEST , so adding in the "Parallel = test" -->
+	<!-- trying to OPEN the url- IN MULTIPLE BROWSERS -->
+	<!-- by passing browser as a PARAMETER and adding a VALUE-->
+	<!-- class name = " package name . class name " -->  
+
+  <!-- TEST 1 - CHROME BROWSER - -->
+  	<test name= "Chrome test">
+      <parameter name ="browser" value="chrome"/>
+      
+      
+      <classes>
+        <class name = "xero_parallelTesting.Browserlaunch" /> 
+      <!--   <class name="xero_parallelTesting.ReusableMethods"/> -->
+      </classes>
+      </test>
+      
+  <!-- TEST 2 -FIREFOX BROWSER- -->
+      <test name="Firefox test">
+      <parameter name ="browser" value="firefox"/>
+      <classes>
+        <class name = "xero_parallelTesting.Browserlaunch" /> 
+        <!--  <class name="xero_parallelTesting.ReusableMethods"/> -->
+      </classes>
+      </test>
+     
+   <!-- TEST 3 -SAFARi BROWSER- 
+   <test name="Safari test">
+      <parameter name ="browser" value="Safari"/>
+      <classes>
+        <class name = "xero_parallelTesting.Browserlaunch" /> 
+         <class name="xero_parallelTesting.ReusableMethods"/>
+      </classes>
+  </test> -->
+  
+</suite> <!-- Suite -->
